@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_checkmap.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: iel-mach <iel-mach@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tchtaibi <tchtaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 17:14:14 by iel-mach          #+#    #+#             */
-/*   Updated: 2022/07/05 12:03:33 by iel-mach         ###   ########.fr       */
+/*   Updated: 2022/07/25 17:41:45 by tchtaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,18 @@ void	ft_checkmap2(char **map, int i, int j)
 	{
 		if (map[i][j] != '1' && map[i][j] != ' ' && map[i][j] != '\t')
 		{
-			printf("0Error: check map!\n");
+			printf("Error: check map!\n");
 			exit(1);
 		}
 	}
 	if (map[i + 1] != NULL)
 	{
 		if ((map[i][j] == 'N' || map[i][j] == 'W' || map[i][j] == 'S' \
-			|| map[i][j] == 'E') && (map[i][j - 1] == ' ' || map[i][j + 1] == ' '
+			|| map[i][j] == 'E') && (map[i][j - 1] \
+			== ' ' || map[i][j + 1] == ' '
 			|| map[i - 1][j] == ' ' || map[i + 1][j] == ' '))
 		{
-			printf("1Error: check map!\n");
+			printf("Error: check map!\n");
 			exit(1);
 		}
 	}
@@ -44,14 +45,14 @@ void	ft_checkmap3(char **map, int i, int j)
 	if (map[i + 1] == NULL && map[i][j] != '1' && map[i][j] != ' ' \
 		&& map[i][j] != '\t')
 	{
-		printf("2Error: check map!\n");
+		printf("Error: check map!\n");
 		exit(1);
 	}
 	if (i != 0 && map[i][j] == '0' && map[i + 1] != NULL)
 	{
 		if (!ft_checkzero(j, map[i - 1], map[i + 1]))
 		{
-			printf("3Error: check map!\n");
+			printf("Error: check map!\n");
 			exit(1);
 		}
 	}
@@ -61,7 +62,7 @@ void	ft_checkmap3(char **map, int i, int j)
 		if (map[i][j] == '0' && (map[i][j - 1] == ' ' || map[i][j + 1] == ' '
 			|| map[i - 1][j] == ' ' || map[i + 1][j] == ' '))
 		{
-			printf("4Error: check map!\n");
+			printf("Error: check map!\n");
 			exit(1);
 		}
 	}
@@ -74,7 +75,7 @@ void	ft_checkmap4(t_check *t, char **map, int i, int j)
 		&& map[i][j] != 'N' && map[i][j] != 'W' && map[i][j] != 'S' \
 		&& map[i][j] != 'E')
 	{
-		printf("5Error: check map!\n");
+		printf("Error: check map!\n");
 		exit(1);
 	}
 	if (map[i][j] == 'N' || map[i][j] == 'S' \
@@ -113,9 +114,5 @@ void	ft_checkmap(char **map)
 		}
 	}
 	if (t.no > 1 || t.ea > 1 || t.we > 1 || t.so > 1 || t.g > 1 || t.g == 0)
-	{
-		printf("%d\n", t.we);
-		printf("6Error: check map!\n");
-		exit(1);
-	}
+		ft_check_norm(t.we);
 }

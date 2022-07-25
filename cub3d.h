@@ -6,7 +6,7 @@
 /*   By: tchtaibi <tchtaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 23:11:52 by iel-mach          #+#    #+#             */
-/*   Updated: 2022/07/25 17:33:12 by tchtaibi         ###   ########.fr       */
+/*   Updated: 2022/07/25 17:41:03 by tchtaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -136,4 +136,5 @@ void	ft_dda(t_img *img, t_ddi *ddi);
 void	ft_rays(t_img *img);
 int		ft_checkzero(int i, char *str, char *str1);
 void	ft_sheftcolor(t_img *img, t_cub *cub);
+void	ft_check_norm(int n);
 #endif
