@@ -6,7 +6,7 @@
 /*   By: tchtaibi <tchtaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 23:11:52 by iel-mach          #+#    #+#             */
-/*   Updated: 2022/07/25 15:41:31 by tchtaibi         ###   ########.fr       */
+/*   Updated: 2022/07/25 17:33:12 by tchtaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # include <math.h>
 # define WIN_HEIGHT 1080
 # define WIN_WIDTH 1920
+
 typedef struct cub
 {
 	char	*n;
@@ -66,11 +67,11 @@ typedef struct ddi
 typedef struct img
 {
 	int		whidth;
-    int		height;
-    void    *black;
-    void    *white;
-    void    *red;
-    void    *no9ta;
+	int		height;
+	void	*black;
+	void	*white;
+	void	*red;
+	void	*no9ta;
 	char	**map;
 	void	*mlx;
 	void	*mlx_win;
@@ -117,6 +118,7 @@ char	*ft_skip(char *s1);
 void	ft_checkcomma(t_cub *cub);
 int		ft_checktexture(t_cub *cub);
 int		ft_initcolor(t_cub *cub);
+int		ft_return(char *str);
 char	*ft_strjoin1(char *s1, char *s2);
 int		ft_atoi(char *s);
 void	ft_checkmap(char **map);
@@ -127,11 +129,11 @@ void	ft_checkfile(char **map);
 int		ft_checkspace(char *str);
 char	*ft_getmap(char *str);
 void	ft_hooks(t_img img);
+t_img	ft_img(t_img img, t_cub *cub);
 int		ft_exit(void);
 int		ft_keyhook(int key, t_img *img);
 void	ft_dda(t_img *img, t_ddi *ddi);
 void	ft_rays(t_img *img);
 int		ft_checkzero(int i, char *str, char *str1);
 void	ft_sheftcolor(t_img *img, t_cub *cub);
-
 #endif

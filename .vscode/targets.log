@@ -1,0 +1,401 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 3.81
+# Copyright (C) 2006  Free Software Foundation, Inc.
+# This is free software; see the source for copying conditions.
+# There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
+
+# This program built for i386-apple-darwin11.3.0
+
+# Make data base, printed on Mon Jul 25 17:08:40 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# makefile (from `Makefile', line 14)
+SRC = *.c ./utils/*.c
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# automatic
+@F = $(notdir $@)
+# makefile
+CURDIR := /Users/tchtaibi/Desktop/CUB3D
+# makefile
+SHELL = /bin/sh
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# makefile (from `Makefile', line 16)
+MLX = -lmlx -framework OpenGL -framework AppKit
+# environment
+_ = /usr/bin/make
+# makefile (from `Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# environment
+VSCODE_CWD = /
+# environment
+Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.TfglduSITs/Render
+# environment
+PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/Users/tchtaibi/goinfre/Flutter/flutter/bin:/Applications/Android Studio.app/Contents/jre/Contents/Home/bin:/Users/tchtaibi/Library/Android/sdk/platform-tools:/Users/tchtaibi/Library/Android/sdk/tools/bin
+# environment
+LSCOLORS = Gxfxcxdxbxegedabagacad
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# default
+.FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
+# environment
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.CK0gNtgZvR/Listeners
+# automatic
+%F = $(notdir $%)
+# environment
+ANDROID_SDK_HOME = /Users/tchtaibi/Library/Android/sdk
+# environment
+PWD = /Users/tchtaibi/Desktop/CUB3D
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /Users/tchtaibi
+# default
+MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
+# environment
+VSCODE_CODE_CACHE_PATH = /Users/tchtaibi/Library/Application Support/Code/CachedData/b06ae3b2d2dbfe28bca3134cc6be65935cdfea6a
+# environment
+LOGNAME = tchtaibi
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+ZSH = /Users/tchtaibi/.oh-my-zsh
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+XPC_FLAGS = 0x0
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+SHLVL = 1
+# makefile (from `Makefile', line 17)
+CC = cc
+# environment
+JAVA_HOME = /Applications/Android Studio.app/Contents/jre/Contents/Home
+# default
+MAKE_VERSION := 3.81
+# environment
+USER = tchtaibi
+# makefile
+.DEFAULT_GOAL := all
+# makefile (from `Makefile', line 13)
+NAME = cub3d
+# environment
+LESS = -R
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# default
+MAKE_COMMAND := /Applications/Xcode.app/Contents/Developer/usr/bin/make
+# default
+.VARIABLES := 
+# environment
+TMPDIR = /var/folders/zz/zyxvpxvq6csfxvn_n0000jdm0004bd/T/
+# automatic
+*F = $(notdir $*)
+# environment
+VSCODE_IPC_HOOK = /Users/tchtaibi/Library/Application Support/Code/1.69.1-main.sock
+# environment
+MallocNanoZone = 0
+# makefile
+MAKEFLAGS = Rrqp
+# environment
+MFLAGS = -Rrqp
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x1000000a.Electron
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# automatic
++F = $(notdir $+)
+# environment
+__CF_USER_TEXT_ENCODING = 0x116D:0:0
+# environment
+COMMAND_MODE = unix2003
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# environment
+PAGER = less
+# environment
+LC_ALL = C
+# environment
+SECURITYSESSIONID = 186c1
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# makefile (from `Makefile', line 15)
+FLAGS = -Wall -Wextra -Werror -fsanitize=address -g3
+# default
+.INCLUDE_DIRS = /usr/local/include
+# environment
+MAKELEVEL := 0
+# environment
+LANG = C
+# environment
+VSCODE_PID = 4803
+# variable set hash-table stats:
+# Load=70/1024=7%, Rehash=0, Collisions=1/104=1%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# utils (device 16777228, inode 4110964): 13 files, no impossibilities.
+# . (device 16777228, inode 4119116): 15 files, no impossibilities.
+
+# 28 files, no impossibilities in 2 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+# Not a target:
+utils/ft_strdup_skip.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-25 15:36:08
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+utils/ft_strlen.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-25 15:36:08
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+all: cub3d
+#  Command-line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/7=0%
+
+# Not a target:
+utils/ft_strrchr.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-25 15:36:08
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+utils/ft_split.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-25 15:36:08
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+utils/ft_checkutils.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-25 15:36:08
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+cub3d: cub3d.c dda.c ft_checkmap.c hooks.c utils/ft_atoi.c utils/ft_checkutils.c utils/ft_checkutils2.c utils/ft_split.c utils/ft_strdup.c utils/ft_strdup_skip.c utils/ft_strlen.c utils/ft_strncmp.c utils/ft_strrchr.c utils/get_next_line.c utils/git_next_line_utils.c
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: `'
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := cub3d
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := cub3d.c dda.c ft_checkmap.c hooks.c utils/ft_atoi.c utils/ft_checkutils.c utils/ft_checkutils2.c utils/ft_split.c utils/ft_strdup.c utils/ft_strdup_skip.c utils/ft_strlen.c utils/ft_strncmp.c utils/ft_strrchr.c utils/get_next_line.c utils/git_next_line_utils.c
+# automatic
+# | := 
+# automatic
+# < := cub3d.c
+# automatic
+# ^ := cub3d.c dda.c ft_checkmap.c hooks.c utils/ft_atoi.c utils/ft_checkutils.c utils/ft_checkutils2.c utils/ft_split.c utils/ft_strdup.c utils/ft_strdup_skip.c utils/ft_strlen.c utils/ft_strncmp.c utils/ft_strrchr.c utils/get_next_line.c utils/git_next_line_utils.c
+# automatic
+# ? := cub3d.c dda.c ft_checkmap.c hooks.c utils/ft_atoi.c utils/ft_checkutils.c utils/ft_checkutils2.c utils/ft_split.c utils/ft_strdup.c utils/ft_strdup_skip.c utils/ft_strlen.c utils/ft_strncmp.c utils/ft_strrchr.c utils/get_next_line.c utils/git_next_line_utils.c
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=3/15=20%
+#  commands to execute (from `Makefile', line 22):
+	$(CC) $(FLAGS) $(SRC) $(MLX) -o $(NAME)
+	
+
+# Not a target:
+dda.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-25 17:03:34
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-25 15:36:08
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+hooks.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-25 15:36:08
+#  File has been updated.
+#  Successfully updated.
+ 
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+fclean: clean
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+cub3d.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-25 17:04:24
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+utils/ft_strncmp.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-25 15:36:08
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+utils/ft_checkutils2.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-25 15:36:08
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+re: fclean all
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+utils/ft_strdup.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-25 15:36:08
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 25):
+	rm -f $(NAME)
+	
+
+# Not a target:
+utils/git_next_line_utils.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-25 15:36:08
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+utils/get_next_line.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-25 15:36:08
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+utils/ft_atoi.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-25 15:36:08
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+ft_checkmap.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-25 15:36:08
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# files hash-table stats:
+# Load=23/1024=2%, Rehash=0, Collisions=0/56=0%
+# VPATH Search Paths
+
+# No `vpath' search paths.
+
+# No general (`VPATH' variable) search path.
+
+# # of strings in strcache: 1
+# # of strcache buffers: 1
+# strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
+# strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
+
+# Finished Make data base on Mon Jul 25 17:08:41 2022
+
+ 

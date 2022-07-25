@@ -1,10 +1,10 @@
-NO Makefile
+NO img/2.xpm
 
-WE Makefile
+WE img/1.xpm
 
-SO Makefile
+SO img/2.xpm
 
-EA Makefile
+EA img/1.xpm
 
 F 156,156,156
 

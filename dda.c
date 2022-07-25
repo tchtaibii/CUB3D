@@ -6,7 +6,7 @@
 /*   By: tchtaibi <tchtaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 13:43:16 by iel-mach          #+#    #+#             */
-/*   Updated: 2022/07/25 17:03:34 by tchtaibi         ###   ########.fr       */
+/*   Updated: 2022/07/25 17:32:49 by tchtaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,15 @@ void	my_mlx_pixel_put(t_data *data, int x, int y, int color)
 
 void	ft_wall(t_img *img, t_ddi *ddi)
 {
-	if (img->map[(int)(ddi->y / 40)][(int)((ddi->x - ddi->xinc)/ 40)] != '1')
+	if (img->map[(int)(ddi->y / 40)][(int)((ddi->x - ddi->xinc) / 40)] != '1')
 	{
 		if (ddi->xinc > 0)
 			ddi->dwall = 1;
 		else
 			ddi->dwall = 2;
 	}
-	else if (img->map[(int)((ddi->y - ddi->yinc) / 40)][(int)(ddi->x / 40)] != '1')
+	else if (img->map[(int)((ddi->y - ddi->yinc) / 40)] \
+	[(int)(ddi->x / 40)] != '1')
 	{
 		if (ddi->yinc > 0)
 			ddi->dwall = 3;
@@ -41,38 +42,34 @@ void	ft_wall(t_img *img, t_ddi *ddi)
 int	ft_getcolor(t_ddi *ddi, t_img *img, int y, int x)
 {
 	char	*dst;
-	//printf ("X : %d | Y : %d\n", x, y);
 
 	x %= 40;
 	y %= 40;
-	
 	if (ddi->dwall == 1)
 	{
-		dst = img->pics[0].addr + (y * img->pics[0].line_length + x * (img->pics[0].bits_per_pixel / 8));
+		dst = img->pics[0].addr + (y * img->pics[0].line_length + x * \
+		(img->pics[0].bits_per_pixel / 8));
 		return (*(int *)dst);
 	}
 	else if (ddi->dwall == 2)
 	{
-		dst = img->pics[1].addr + (y * img->pics[1].line_length + x * (img->pics[1].bits_per_pixel / 8));
+		dst = img->pics[1].addr + (y * img->pics[1].line_length + x * \
+		(img->pics[1].bits_per_pixel / 8));
 		return (*(int *)dst);
 	}
 	else if (ddi->dwall == 3)
 	{
-		dst = img->pics[2].addr + (y * img->pics[2].line_length + x * (img->pics[2].bits_per_pixel / 8));
+		dst = img->pics[2].addr + (y * img->pics[2].line_length + x * \
+		(img->pics[2].bits_per_pixel / 8));
 		return (*(int *)dst);
 	}
 	else if (ddi->dwall == 4)
 	{
-		dst = img->pics[3].addr + (y * img->pics[3].line_length + x * (img->pics[3].bits_per_pixel / 8));
+		dst = img->pics[3].addr + (y * img->pics[3].line_length + x * \
+		(img->pics[3].bits_per_pixel / 8));
 		return (*(int *)dst);
 	}
 	return (0);
-}
-
-void	ft_sheftcolor(t_img *img, t_cub *cub)
-{
-	img->floor = (cub->redf << 16) + (cub->greenf << 8) + cub->bluef;
-	img->ceilling = (cub->redc << 16) + (cub->greenc << 8) + cub->bluec;
 }
 
 void	ft_draw(t_img *img, t_ddi *ddi)
@@ -102,7 +99,6 @@ void	ft_draw(t_img *img, t_ddi *ddi)
 				ddi->c = fmod(ddi->y / 40, 1);
 			else
 				ddi->c = fmod(ddi->x / 40, 1);
-			//printf("ddi->c : %f\n\n", ddi->c);
 			ddi->c *= 40;
 			my_mlx_pixel_put(&img->data, img->y, j, ft_getcolor(ddi, img, (int)(((j - (int)((WIN_HEIGHT - dakshi) / 2)) * 40) / dakshi), (int)ddi->c));
 		}

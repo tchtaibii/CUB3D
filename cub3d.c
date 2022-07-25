@@ -6,30 +6,11 @@
 /*   By: tchtaibi <tchtaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 23:11:35 by iel-mach          #+#    #+#             */
-/*   Updated: 2022/07/25 17:04:24 by tchtaibi         ###   ########.fr       */
+/*   Updated: 2022/07/25 17:21:47 by tchtaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
-
-t_img	ft_img(t_img img)
-{
-	int k;
-	img.pics = malloc(sizeof(t_data) * 4);
-	img.pics[0].img = mlx_xpm_file_to_image(img.mlx, "img/1.xpm", &k, &k);
-	img.pics[0].addr = mlx_get_data_addr(img.pics[0].img, &img.pics[0].bits_per_pixel, \
-					&img.pics[0].line_length, &img.pics[0].endian);
-	img.pics[1].img = mlx_xpm_file_to_image(img.mlx, "img/2.xpm", &k, &k);
-	img.pics[1].addr = mlx_get_data_addr(img.pics[1].img, &img.pics[1].bits_per_pixel, \
-					&img.pics[1].line_length, &img.pics[1].endian);
-	img.pics[2].img = mlx_xpm_file_to_image(img.mlx, "img/2.xpm", &k, &k);
-	img.pics[2].addr = mlx_get_data_addr(img.pics[2].img, &img.pics[2].bits_per_pixel, \
-					&img.pics[2].line_length, &img.pics[2].endian);
-	img.pics[3].img = mlx_xpm_file_to_image(img.mlx, "img/1.xpm", &k, &k);
-	img.pics[3].addr = mlx_get_data_addr(img.pics[3].img, &img.pics[3].bits_per_pixel, \
-					&img.pics[3].line_length, &img.pics[3].endian);
-	return (img);
-}
 
 int	ft_exit(void)
 {
@@ -67,7 +48,7 @@ void	ft_drawmap(t_cub *cub)
 	img.data.img = mlx_new_image(img.mlx, WIN_WIDTH, WIN_HEIGHT);
 	img.data.addr = mlx_get_data_addr(img.data.img, &img.data.bits_per_pixel, \
 		&img.data.line_length, &img.data.endian);
-	img = ft_img(img);
+	img = ft_img(img, cub);
 	while (img.map[++img.i])
 	{
 		img.j = -1;
@@ -109,33 +90,21 @@ int	main(int ac, char **av)
 	char	*str;
 
 	if (ac != 2)
-	{
-		printf("Error: Bad Arg\n");
-		return (1);
-	}
+		return (ft_return(("Error: Bad Arg")));
 	else
 	{
 		ft_checkex(av[1]);
 		str = ft_getmap(av[1]);
 		map = ft_split_file(str);
 		if (!map[0])
-		{
-			printf("Error: empty file!\n");
-			return (1);
-		}
+			return (ft_return("Error: empty file!"));
 		ft_checkfile(map);
 		cub = ft_parse(map);
 		if (!ft_checktexture(cub))
-		{
-			printf("check texture\n");
-			return (1);
-		}
+			return (ft_return("check texture"));
 		ft_checkcomma(cub);
 		if (!ft_initcolor(cub))
-		{
-			printf("check color\n");
-			return (1);
-		}
+			return (ft_return("check color"));
 		ft_checkmap(cub->map);
 		ft_drawmap(cub);
 	}
