@@ -6,7 +6,7 @@
 /*   By: tchtaibi <tchtaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 17:12:03 by tchtaibi          #+#    #+#             */
-/*   Updated: 2022/07/25 17:40:29 by tchtaibi         ###   ########.fr       */
+/*   Updated: 2022/07/25 18:29:37 by tchtaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,4 +52,11 @@ void	ft_check_norm(int n)
 	printf("%d\n", n);
 	printf("Error: check map!\n");
 	exit(1);
+}
+
+int	last_char(char *str)
+{
+	if (str[ft_strlen(str) - 1] != '1')
+		return (0);
+	return (1);
 }

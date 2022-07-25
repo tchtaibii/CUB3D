@@ -6,7 +6,7 @@
 /*   By: tchtaibi <tchtaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 23:11:52 by iel-mach          #+#    #+#             */
-/*   Updated: 2022/07/25 17:41:03 by tchtaibi         ###   ########.fr       */
+/*   Updated: 2022/07/25 18:26:06 by tchtaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,6 +124,7 @@ int		ft_atoi(char *s);
 void	ft_checkmap(char **map);
 t_cub	*ft_parse(char **map);
 int		ft_isdigit(int c);
+int		last_char(char *str);
 int		ft_skipspace(char *str);
 void	ft_checkfile(char **map);
 int		ft_checkspace(char *str);

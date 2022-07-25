@@ -6,7 +6,7 @@
 /*   By: tchtaibi <tchtaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 23:11:35 by iel-mach          #+#    #+#             */
-/*   Updated: 2022/07/25 17:21:47 by tchtaibi         ###   ########.fr       */
+/*   Updated: 2022/07/25 18:30:00 by tchtaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,8 @@ int	main(int ac, char **av)
 	{
 		ft_checkex(av[1]);
 		str = ft_getmap(av[1]);
+		if (!last_char(str))
+			return (ft_return("ERROR"));
 		map = ft_split_file(str);
 		if (!map[0])
 			return (ft_return("Error: empty file!"));
