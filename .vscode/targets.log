@@ -7,7 +7,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 
 # This program built for i386-apple-darwin11.3.0
 
-# Make data base, printed on Mon Jul 25 17:08:40 2022
+# Make data base, printed on Mon Jul 25 18:32:21 2022
 
 # Variables
 
@@ -160,10 +160,10 @@ VSCODE_PID = 4803
 
 # Directories
 
-# utils (device 16777228, inode 4110964): 13 files, no impossibilities.
+# utils (device 16777228, inode 4110964): 14 files, no impossibilities.
 # . (device 16777228, inode 4119116): 15 files, no impossibilities.
 
-# 28 files, no impossibilities in 2 directories.
+# 29 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
@@ -225,7 +225,7 @@ utils/ft_checkutils.c:
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
-cub3d: cub3d.c dda.c ft_checkmap.c hooks.c utils/ft_atoi.c utils/ft_checkutils.c utils/ft_checkutils2.c utils/ft_split.c utils/ft_strdup.c utils/ft_strdup_skip.c utils/ft_strlen.c utils/ft_strncmp.c utils/ft_strrchr.c utils/get_next_line.c utils/git_next_line_utils.c
+cub3d: cub3d.c dda.c ft_checkmap.c hooks.c utils/ft_atoi.c utils/ft_checkutils.c utils/ft_checkutils2.c utils/ft_split.c utils/ft_strdup.c utils/ft_strdup_skip.c utils/ft_strlen.c utils/ft_strncmp.c utils/ft_strrchr.c utils/get_next_line.c utils/git_next_line_utils.c utils/some_tools.c
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: `'
 #  File does not exist.
@@ -238,15 +238,15 @@ cub3d: cub3d.c dda.c ft_checkmap.c hooks.c utils/ft_atoi.c utils/ft_checkutils.c
 # automatic
 # * := 
 # automatic
-# + := cub3d.c dda.c ft_checkmap.c hooks.c utils/ft_atoi.c utils/ft_checkutils.c utils/ft_checkutils2.c utils/ft_split.c utils/ft_strdup.c utils/ft_strdup_skip.c utils/ft_strlen.c utils/ft_strncmp.c utils/ft_strrchr.c utils/get_next_line.c utils/git_next_line_utils.c
+# + := cub3d.c dda.c ft_checkmap.c hooks.c utils/ft_atoi.c utils/ft_checkutils.c utils/ft_checkutils2.c utils/ft_split.c utils/ft_strdup.c utils/ft_strdup_skip.c utils/ft_strlen.c utils/ft_strncmp.c utils/ft_strrchr.c utils/get_next_line.c utils/git_next_line_utils.c utils/some_tools.c
 # automatic
 # | := 
 # automatic
 # < := cub3d.c
 # automatic
-# ^ := cub3d.c dda.c ft_checkmap.c hooks.c utils/ft_atoi.c utils/ft_checkutils.c utils/ft_checkutils2.c utils/ft_split.c utils/ft_strdup.c utils/ft_strdup_skip.c utils/ft_strlen.c utils/ft_strncmp.c utils/ft_strrchr.c utils/get_next_line.c utils/git_next_line_utils.c
+# ^ := cub3d.c dda.c ft_checkmap.c hooks.c utils/ft_atoi.c utils/ft_checkutils.c utils/ft_checkutils2.c utils/ft_split.c utils/ft_strdup.c utils/ft_strdup_skip.c utils/ft_strlen.c utils/ft_strncmp.c utils/ft_strrchr.c utils/get_next_line.c utils/git_next_line_utils.c utils/some_tools.c
 # automatic
-# ? := cub3d.c dda.c ft_checkmap.c hooks.c utils/ft_atoi.c utils/ft_checkutils.c utils/ft_checkutils2.c utils/ft_split.c utils/ft_strdup.c utils/ft_strdup_skip.c utils/ft_strlen.c utils/ft_strncmp.c utils/ft_strrchr.c utils/get_next_line.c utils/git_next_line_utils.c
+# ? := cub3d.c dda.c ft_checkmap.c hooks.c utils/ft_atoi.c utils/ft_checkutils.c utils/ft_checkutils2.c utils/ft_split.c utils/ft_strdup.c utils/ft_strdup_skip.c utils/ft_strlen.c utils/ft_strncmp.c utils/ft_strrchr.c utils/get_next_line.c utils/git_next_line_utils.c utils/some_tools.c
 # variable set hash-table stats:
 # Load=8/32=25%, Rehash=0, Collisions=3/15=20%
 #  commands to execute (from `Makefile', line 22):
@@ -256,7 +256,16 @@ cub3d: cub3d.c dda.c ft_checkmap.c hooks.c utils/ft_atoi.c utils/ft_checkutils.c
 # Not a target:
 dda.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-25 17:03:34
+#  Last modified 2022-07-25 17:32:49
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+utils/some_tools.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-25 18:29:37
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -271,6 +280,7 @@ dda.c:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
+ 
 #  Last modified 2022-07-25 15:36:08
 #  File has been updated.
 #  Successfully updated.
@@ -283,7 +293,6 @@ hooks.c:
 #  Last modified 2022-07-25 15:36:08
 #  File has been updated.
 #  Successfully updated.
- 
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
@@ -295,7 +304,7 @@ fclean: clean
 # Not a target:
 cub3d.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-25 17:04:24
+#  Last modified 2022-07-25 18:30:00
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -377,14 +386,14 @@ utils/ft_atoi.c:
 # Not a target:
 ft_checkmap.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-25 15:36:08
+#  Last modified 2022-07-25 17:41:45
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # files hash-table stats:
-# Load=23/1024=2%, Rehash=0, Collisions=0/56=0%
+# Load=24/1024=2%, Rehash=0, Collisions=0/58=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -396,6 +405,6 @@ ft_checkmap.c:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Mon Jul 25 17:08:41 2022
+# Finished Make data base on Mon Jul 25 18:32:21 2022
 
  

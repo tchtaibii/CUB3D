@@ -6,7 +6,7 @@
 /*   By: tchtaibi <tchtaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 13:43:16 by iel-mach          #+#    #+#             */
-/*   Updated: 2022/07/25 17:32:49 by tchtaibi         ###   ########.fr       */
+/*   Updated: 2022/07/25 18:37:39 by tchtaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,18 +57,8 @@ int	ft_getcolor(t_ddi *ddi, t_img *img, int y, int x)
 		(img->pics[1].bits_per_pixel / 8));
 		return (*(int *)dst);
 	}
-	else if (ddi->dwall == 3)
-	{
-		dst = img->pics[2].addr + (y * img->pics[2].line_length + x * \
-		(img->pics[2].bits_per_pixel / 8));
-		return (*(int *)dst);
-	}
-	else if (ddi->dwall == 4)
-	{
-		dst = img->pics[3].addr + (y * img->pics[3].line_length + x * \
-		(img->pics[3].bits_per_pixel / 8));
-		return (*(int *)dst);
-	}
+	else
+		return (ft_getcolor_norm(ddi, img, y, x));
 	return (0);
 }
 
@@ -100,7 +90,9 @@ void	ft_draw(t_img *img, t_ddi *ddi)
 			else
 				ddi->c = fmod(ddi->x / 40, 1);
 			ddi->c *= 40;
-			my_mlx_pixel_put(&img->data, img->y, j, ft_getcolor(ddi, img, (int)(((j - (int)((WIN_HEIGHT - dakshi) / 2)) * 40) / dakshi), (int)ddi->c));
+			my_mlx_pixel_put(&img->data, img->y, j, ft_getcolor(ddi, img, \
+			(int)(((j - (int)((WIN_HEIGHT - dakshi) / 2)) * 40) / dakshi), \
+			(int)ddi->c));
 		}
 		else
 			my_mlx_pixel_put(&img->data, img->y, j, img->floor);
