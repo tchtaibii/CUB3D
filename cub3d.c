@@ -6,7 +6,7 @@
 /*   By: tchtaibi <tchtaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 23:11:35 by iel-mach          #+#    #+#             */
-/*   Updated: 2022/07/25 18:30:00 by tchtaibi         ###   ########.fr       */
+/*   Updated: 2022/07/26 03:20:29 by tchtaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ void	ft_init(t_img *img)
 			img->r = 180;
 		else if (img->map[img->i][img->j] == 'E')
 			img->r = 0;
-		img->x0 = img->j * 40;
-		img->y0 = img->i * 40;
+		img->x0 = img->j * SIZE_IMG;
+		img->y0 = img->i * SIZE_IMG;
 	}
 }
 

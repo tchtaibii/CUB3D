@@ -6,7 +6,7 @@
 /*   By: tchtaibi <tchtaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 18:39:30 by tchtaibi          #+#    #+#             */
-/*   Updated: 2022/07/26 02:11:31 by tchtaibi         ###   ########.fr       */
+/*   Updated: 2022/07/26 03:20:09 by tchtaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,12 +43,12 @@ void	ft_draw_norm(t_img *img, t_ddi *ddi, int dakshi)
 		else if (j <= (int)((WIN_HEIGHT - dakshi) / 2) + dakshi)
 		{
 			if (ddi->dwall == 1 || ddi->dwall == 2)
-				ddi->c = fmod(ddi->y / 40, 1);
+				ddi->c = fmod(ddi->y / SIZE_IMG, 1);
 			else
-				ddi->c = fmod(ddi->x / 40, 1);
-			ddi->c *= 40;
+				ddi->c = fmod(ddi->x / SIZE_IMG, 1);
+			ddi->c *= SIZE_IMG;
 			my_mlx_pixel_put(&img->data, img->y, j, ft_getcolor(ddi, img, \
-			(int)(((j - (int)((WIN_HEIGHT - dakshi) / 2)) * 40) / dakshi), \
+			(int)(((j - (int)((WIN_HEIGHT - dakshi) / 2)) * SIZE_IMG) / dakshi), \
 			(int)ddi->c));
 		}
 		else

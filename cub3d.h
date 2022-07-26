@@ -6,7 +6,7 @@
 /*   By: tchtaibi <tchtaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 23:11:52 by iel-mach          #+#    #+#             */
-/*   Updated: 2022/07/26 02:48:53 by tchtaibi         ###   ########.fr       */
+/*   Updated: 2022/07/26 03:20:47 by tchtaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # include <math.h>
 # define WIN_HEIGHT 1080
 # define WIN_WIDTH 1920
+# define SIZE_IMG 64
 
 typedef struct cub
 {
