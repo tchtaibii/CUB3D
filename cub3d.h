@@ -6,7 +6,7 @@
 /*   By: tchtaibi <tchtaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 23:11:52 by iel-mach          #+#    #+#             */
-/*   Updated: 2022/07/25 18:40:06 by tchtaibi         ###   ########.fr       */
+/*   Updated: 2022/07/26 02:48:53 by tchtaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,7 @@ typedef struct check
 	int	s;
 	int	w;
 	int	e;
+	int	i;
 	int	f;
 	int	c;
 	int	no;
@@ -130,7 +131,9 @@ void	ft_checkfile(char **map);
 int		ft_checkspace(char *str);
 char	*ft_getmap(char *str);
 void	ft_hooks(t_img img);
+t_check	ft_check_init(void);
 t_img	ft_img(t_img img, t_cub *cub);
+void	ft_errors(t_check check);
 int		ft_exit(void);
 int		ft_keyhook(int key, t_img *img);
 void	ft_dda(t_img *img, t_ddi *ddi);
@@ -138,5 +141,17 @@ void	ft_rays(t_img *img);
 int		ft_checkzero(int i, char *str, char *str1);
 void	ft_sheftcolor(t_img *img, t_cub *cub);
 void	ft_check_norm(int n);
+void	ft_exit_f(void);
 int		ft_getcolor_norm(t_ddi *ddi, t_img *img, int y, int x);
+void	ft_draw(t_img *img, t_ddi *ddi);
+int		ft_getcolor(t_ddi *ddi, t_img *img, int y, int x);
+void	my_mlx_pixel_put(t_data *data, int x, int y, int color);
+void	ft_draw_norm(t_img *img, t_ddi *ddi, int dakshi);
+void	ft_key_13(t_img *img);
+void	ft_key_0(t_img *img);
+void	ft_key_1(t_img *img);
+void	ft_key_2(t_img *img);
+int		ft_checkzero(int i, char *str, char *str1);
+t_cub	*ft_parse(char **map);
+
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_checkutils2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: iel-mach <iel-mach@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tchtaibi <tchtaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 08:53:54 by iel-mach          #+#    #+#             */
-/*   Updated: 2022/07/08 17:19:10 by iel-mach         ###   ########.fr       */
+/*   Updated: 2022/07/26 02:11:00 by tchtaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,61 +71,28 @@ int	ft_checkspace(char *str)
 void	ft_checkfile(char **map)
 {
 	t_check	check;
-	int		i;
 
-	i = 0;
-	check.n = 0;
-	check.s = 0;
-	check.w = 0;
-	check.e = 0;
-	check.f = 0;
-	check.c = 0;
-	while (map[i])
+	check = ft_check_init();
+	while (map[++check.i])
 	{
-		if (!ft_strncmp(map[i], "NO ", 3))
-		{
-			i++;
+		if (!ft_strncmp(map[check.i], "NO ", 3))
 			check.n++;
-		}
-		else if (!ft_strncmp(map[i], "SO ", 3))
-		{
-			i++;
+		else if (!ft_strncmp(map[check.i], "SO ", 3))
 			check.s++;
-		}
-		else if (!ft_strncmp(map[i], "WE ", 3))
-		{
-			i++;
+		else if (!ft_strncmp(map[check.i], "WE ", 3))
 			check.w++;
-		}
-		else if (!ft_strncmp(map[i], "EA ", 3))
-		{
-			i++;
+		else if (!ft_strncmp(map[check.i], "EA ", 3))
 			check.e++;
-		}
-		else if (!ft_strncmp(map[i], "F ", 2))
-		{
-			i++;
+		else if (!ft_strncmp(map[check.i], "F ", 2))
 			check.f++;
-		}
-		else if (!ft_strncmp(map[i], "C ", 2))
-		{
-			i++;
+		else if (!ft_strncmp(map[check.i], "C ", 2))
 			check.c++;
-		}
-		else if (ft_checkspace(map[i]))
-			i++;
+		else if (ft_checkspace(map[check.i]))
+			;
 		else
-		{
-			printf("Error: check file!\n");
-			exit(1);
-		}
+			ft_exit_f();
 	}
-	if (check.n != 1 || check.s != 1 || check.w != 1 \
-		|| check.e != 1 || check.f != 1 || check.c != 1)
-	{
-		printf("Error: check file!\n");
-		exit(1);
-	}
+	ft_errors(check);
 }
 
 int	ft_skipspace(char *str)

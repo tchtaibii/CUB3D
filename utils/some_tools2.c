@@ -6,7 +6,7 @@
 /*   By: tchtaibi <tchtaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 18:39:30 by tchtaibi          #+#    #+#             */
-/*   Updated: 2022/07/25 18:39:52 by tchtaibi         ###   ########.fr       */
+/*   Updated: 2022/07/26 02:11:31 by tchtaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,59 @@ int	ft_getcolor_norm(t_ddi *ddi, t_img *img, int y, int x)
 		return (*(int *)dst);
 	}
 	return (0);
+}
+
+void	ft_draw_norm(t_img *img, t_ddi *ddi, int dakshi)
+{
+	int	j;
+
+	j = -1;
+	while (++j < WIN_HEIGHT && img->y < WIN_WIDTH)
+	{
+		if (j < (int)(WIN_HEIGHT - dakshi) / 2)
+			my_mlx_pixel_put(&img->data, img->y, j, img->ceilling);
+		else if (j <= (int)((WIN_HEIGHT - dakshi) / 2) + dakshi)
+		{
+			if (ddi->dwall == 1 || ddi->dwall == 2)
+				ddi->c = fmod(ddi->y / 40, 1);
+			else
+				ddi->c = fmod(ddi->x / 40, 1);
+			ddi->c *= 40;
+			my_mlx_pixel_put(&img->data, img->y, j, ft_getcolor(ddi, img, \
+			(int)(((j - (int)((WIN_HEIGHT - dakshi) / 2)) * 40) / dakshi), \
+			(int)ddi->c));
+		}
+		else
+			my_mlx_pixel_put(&img->data, img->y, j, img->floor);
+	}
+}
+
+void	ft_errors(t_check check)
+{
+	if (check.n != 1 || check.s != 1 || check.w != 1 \
+		|| check.e != 1 || check.f != 1 || check.c != 1)
+	{
+		printf("Error: check file!\n");
+		exit(1);
+	}
+}
+
+void	ft_exit_f(void)
+{
+	printf("Error: check file!\n");
+	exit(1);
+}
+
+t_check	ft_check_init(void)
+{
+	t_check	check;
+
+	check.n = 0;
+	check.s = 0;
+	check.w = 0;
+	check.e = 0;
+	check.f = 0;
+	check.c = 0;
+	check.i = -1;
+	return (check);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_checkutils.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: iel-mach <iel-mach@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tchtaibi <tchtaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 08:49:40 by iel-mach          #+#    #+#             */
-/*   Updated: 2022/07/07 17:07:38 by iel-mach         ###   ########.fr       */
+/*   Updated: 2022/07/26 02:47:48 by tchtaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 int	ft_initcolor(t_cub *cub)
 {
-	// t_color	color;
 	char	**splt;
 	int		i;
 
@@ -48,14 +47,14 @@ int	ft_checkcomma2(char *f, char *c)
 
 	i = 0;
 	comma = 0;
-	while(c[i])
+	while (c[i])
 	{
 		if (c[i] == ',')
 			comma++;
 		i++;
 	}
 	i = 0;
-	while(f[i])
+	while (f[i])
 	{
 		if (f[i] == ',')
 			comma++;
@@ -121,70 +120,4 @@ int	ft_checktexture(t_cub *cub)
 		return (0);
 	close(fd);
 	return (1);
-}
-
-int	ft_checkzero(int i, char *str, char *str1)
-{
-	int	a;
-	int	b;
-
-	a = ft_strlen(str);
-	b = ft_strlen(str1);
-	if (i > a || i > b)
-		return (0);
-	return (1);
-}
-
-t_cub	*ft_parse(char **map)
-{
-	t_cub	*cub;
-	int		i;
-	int		j;
-	int		a;
-
-	i = -1;
-	cub = malloc (sizeof(t_cub));
-	if (!cub)
-		return (NULL);
-	while (map[++i])
-	{
-		j = 0;
-		if (map[i][j] == ' ')
-		{
-			while (map[i][j] == ' ')
-				j++;
-			if (map[i][j] == '\0')
-				i++;
-			else
-				break ;
-		}
-		if (!ft_strncmp(map[i], "NO ", 3))
-			cub->n = ft_skip(map[i]);
-		else if (!ft_strncmp(map[i], "SO ", 3))
-			cub->s = ft_skip(map[i]);
-		else if (!ft_strncmp(map[i], "WE ", 3))
-			cub->w = ft_skip(map[i]);
-		else if (!ft_strncmp(map[i], "EA ", 3))
-			cub->e = ft_skip(map[i]);
-		else if (!ft_strncmp(map[i], "F ", 2))
-			cub->f = ft_skip(map[i]);
-		else if (!ft_strncmp(map[i], "C ", 2))
-			cub->c = ft_skip(map[i]);
-		else if (!ft_strncmp(map[i], "1", 1))
-			break ;
-	}
-	j = 0;
-	while (map[j])
-		j++;
-	a = j - i;
-	cub->map = malloc(sizeof(char *) * (a + 1));
-	j = 0;
-	while (map[i])
-		cub->map[j++] = ft_strdup(map[i++]);
-	cub->map[j] = NULL;
-	i = -1;
-	while (map[++i])
-		free(map[i]);
-	free(map);
-	return (cub);
 }

@@ -6,7 +6,7 @@
 /*   By: tchtaibi <tchtaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 13:43:16 by iel-mach          #+#    #+#             */
-/*   Updated: 2022/07/25 18:37:39 by tchtaibi         ###   ########.fr       */
+/*   Updated: 2022/07/26 01:51:09 by tchtaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,6 @@ void	ft_draw(t_img *img, t_ddi *ddi)
 	int		dakshi;
 	float	d;
 	float	ca;
-	int		j;
 
 	ft_wall(img, ddi);
 	d = sqrt(pow((ddi->y - ddi->y0), 2) + pow((ddi->x - ddi->x0), 2));
@@ -78,25 +77,7 @@ void	ft_draw(t_img *img, t_ddi *ddi)
 		ca -= 2 * M_PI;
 	d = d * cos(ca);
 	dakshi = (40 * WIN_HEIGHT) / d;
-	j = -1;
-	while (++j < WIN_HEIGHT && img->y < WIN_WIDTH)
-	{
-		if (j < (int)(WIN_HEIGHT - dakshi) / 2)
-			my_mlx_pixel_put(&img->data, img->y, j, img->ceilling);
-		else if (j <= (int)((WIN_HEIGHT - dakshi) / 2) + dakshi)
-		{
-			if (ddi->dwall == 1 || ddi->dwall == 2)
-				ddi->c = fmod(ddi->y / 40, 1);
-			else
-				ddi->c = fmod(ddi->x / 40, 1);
-			ddi->c *= 40;
-			my_mlx_pixel_put(&img->data, img->y, j, ft_getcolor(ddi, img, \
-			(int)(((j - (int)((WIN_HEIGHT - dakshi) / 2)) * 40) / dakshi), \
-			(int)ddi->c));
-		}
-		else
-			my_mlx_pixel_put(&img->data, img->y, j, img->floor);
-	}
+	ft_draw_norm(img, ddi, dakshi);
 }
 
 void	ft_dda(t_img *img, t_ddi *ddi)
