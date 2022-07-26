@@ -6,7 +6,7 @@
 /*   By: tchtaibi <tchtaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 02:48:10 by tchtaibi          #+#    #+#             */
-/*   Updated: 2022/07/26 03:02:56 by tchtaibi         ###   ########.fr       */
+/*   Updated: 2022/07/26 19:58:07 by tchtaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ int	ft_checkzero(int i, char *str, char *str1)
 
 	a = ft_strlen(str);
 	b = ft_strlen(str1);
+	i++;
 	if (i > a || i > b)
 		return (0);
 	return (1);
