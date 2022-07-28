@@ -6,7 +6,7 @@
 /*   By: tchtaibi <tchtaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 17:14:14 by iel-mach          #+#    #+#             */
-/*   Updated: 2022/07/26 20:28:09 by tchtaibi         ###   ########.fr       */
+/*   Updated: 2022/07/26 20:29:43 by tchtaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,7 +109,7 @@ void	ft_checkmap(char **map)
 		while (map[i][++j])
 		{
 			if (map[i][0] == ' ' && map[i][1] == '\0')
-				exit(1);
+				ft_exit_f();
 			ft_checkmap2(map, i, j);
 			ft_checkmap3(map, i, j);
 			ft_checkmap4(&t, map, i, j);
