@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tchtaibi <tchtaibi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: iel-mach <iel-mach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 23:11:52 by iel-mach          #+#    #+#             */
-/*   Updated: 2022/07/26 03:20:47 by tchtaibi         ###   ########.fr       */
+/*   Updated: 2022/07/28 19:52:21 by iel-mach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,7 +141,7 @@ void	ft_dda(t_img *img, t_ddi *ddi);
 void	ft_rays(t_img *img);
 int		ft_checkzero(int i, char *str, char *str1);
 void	ft_sheftcolor(t_img *img, t_cub *cub);
-void	ft_check_norm(int n);
+void	ft_check_norm(void);
 void	ft_exit_f(void);
 int		ft_getcolor_norm(t_ddi *ddi, t_img *img, int y, int x);
 void	ft_draw(t_img *img, t_ddi *ddi);

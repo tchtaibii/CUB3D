@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   some_tools.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tchtaibi <tchtaibi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: iel-mach <iel-mach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 17:12:03 by tchtaibi          #+#    #+#             */
-/*   Updated: 2022/07/26 20:31:47 by tchtaibi         ###   ########.fr       */
+/*   Updated: 2022/07/28 19:51:52 by iel-mach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,8 @@ void	ft_sheftcolor(t_img *img, t_cub *cub)
 	img->ceilling = (cub->redc << 16) + (cub->greenc << 8) + cub->bluec;
 }
 
-void	ft_check_norm(int n)
+void	ft_check_norm(void)
 {
-	printf("%d\n", n);
 	printf("Error: check map!\n");
 	exit(1);
 }

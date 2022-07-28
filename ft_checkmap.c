@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_checkmap.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tchtaibi <tchtaibi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: iel-mach <iel-mach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 17:14:14 by iel-mach          #+#    #+#             */
-/*   Updated: 2022/07/26 20:29:43 by tchtaibi         ###   ########.fr       */
+/*   Updated: 2022/07/28 19:52:03 by iel-mach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,5 +116,5 @@ void	ft_checkmap(char **map)
 		}
 	}
 	if (t.no > 1 || t.ea > 1 || t.we > 1 || t.so > 1 || t.g > 1 || t.g == 0)
-		ft_check_norm(t.we);
+		ft_check_norm();
 }
