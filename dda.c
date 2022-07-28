@@ -6,7 +6,7 @@
 /*   By: tchtaibi <tchtaibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 13:43:16 by iel-mach          #+#    #+#             */
-/*   Updated: 2022/07/28 19:41:02 by tchtaibi         ###   ########.fr       */
+/*   Updated: 2022/07/28 19:48:07 by tchtaibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	my_mlx_pixel_put(t_data *data, int x, int y, int color)
 
 void	ft_wall(t_img *img, t_ddi *ddi)
 {
-	if (img->map[(int)(ddi->y / SIZE_IMG)][(int)((ddi->x /
+	if (img->map[(int)(ddi->y / SIZE_IMG)][(int)((ddi->x \
 	- ddi->xinc) / SIZE_IMG)] != '1')
 	{
 		if (ddi->xinc > 0)
